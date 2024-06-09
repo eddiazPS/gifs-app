@@ -1,22 +1,10 @@
 <div class="row">
-  <div *ngFor=" let gif of gifs " class="col-md-3 col-sm-6">
+
+  <gifs-card *ngFor=" let gif of gifs" [gif]="gif" class="col-md-3 col-sm-6"></gifs-card>
+
+
+  <!-- <div *ngFor=" let gif of gifs " class="col-md-3 col-sm-6"> -->
     <!-- el row tien 12.  en pantallas medianas muestro 4 columnas (3*4=12) . en pantallas pequeñas muestro 2 columnas porque (6*2=12) -->
-    <div class="card mb-2 text-center bg-dark"> <!-- mb   marginBotton -->
-
-      <img
-      [src]="gif.images.downsized_medium.url"
-      [alt]="gif.title"
-      class="card-img-top"
-      >
 
 
-
-      <div class="card-body text-white">
-        <p class="card-text">
-          {{ gif.title}}
-        </p>
-      </div>
-    </div>
   </div>
-
-</div>
